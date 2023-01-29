@@ -1,0 +1,81 @@
+.hero {
+  padding: 264px 0;
+  background-image: url("../img/hero-bg.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__container {
+    position: relative;
+  }
+
+  &__working-house {
+    margin: 0;
+    margin-bottom: 24px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--light-color);
+
+    @include tablet {
+      font-size: 18px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 40px;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 88px;
+    color: var(--light-color);
+
+    @include tablet {
+      font-size: 34px;
+      line-height: 55px;
+    }
+  }
+
+  &__buttons {
+    @include flex-all-sb;
+
+    @include small-tablet {
+      flex-direction: column;
+    }
+  }
+
+  &__btn {
+    @include small-tablet {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__icon-list {
+    display: flex;
+    gap: 25px;
+  }
+
+  &__icon-item {
+    @include flex-all-center;
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+    border: 1px solid #fff;
+    background-color: transparent;
+    border-radius: 100%;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #ffffff;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: var(--tan-color);
+    }
+  }
+
+  @include small-tablet {
+    padding: 155px 0;
+  }
+}

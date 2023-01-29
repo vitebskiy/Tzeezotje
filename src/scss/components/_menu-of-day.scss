@@ -1,0 +1,110 @@
+.menu-of-day {
+  padding-top: 80px;
+  padding-bottom: 178px;
+
+  &__content {
+    display: grid;
+    grid-template-columns: 469px 1fr;
+    gap: 34px;
+
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__list {
+    // background-color: aqua;
+  }
+
+  &__img {
+    position: relative;
+    background-image: url("../img/menu-bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__img--left {
+    position: absolute;
+    background-image: url("../img/menu-bg-left.jpg");
+    background-position: left;
+    width: 323px;
+    height: 486px;
+    left: 0;
+    bottom: -65px;
+  }
+
+  &__img--right {
+    position: absolute;
+    background-image: url("../img/menu-bg-right.jpg");
+    background-position: left;
+    width: 323px;
+    height: 486px;
+    right: 0;
+    top: 0;
+  }
+
+  &__item {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e7e7e7;
+
+    @include tablet {
+      text-align: center;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    color: var(--black-color);
+
+    @include small-tablet {
+      font-size: 18px;
+    }
+  }
+
+  &__descr {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    line-height: 32px;
+    color: var(--black-color);
+
+    @include tablet {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__dot {
+    margin: 0 12px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #d3b47f;
+
+    &:not(:last-child) {
+      margin-right: 12px;
+    }
+  }
+
+  &__dot:not(:last-child) {
+    margin-right: 12px;
+
+    @include small-tablet {
+      margin-right: -9px;
+    }
+  }
+
+  @include small-tablet {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
